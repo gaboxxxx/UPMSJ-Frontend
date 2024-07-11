@@ -1,0 +1,39 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+<div class="container">
+  <div class="header text-center">
+      <h3>Sistema de Inventarios</h3>
+  </div>
+  
+  <table class="tabla-donante">
+      <thead>
+        <tr>
+          <th scope="col">Id</th>
+          <th scope="col">Donante</th>
+          <th scope="col">Dirección</th>
+          <th scope="col">Teléfono</th>
+          <th scope="col">Email</th>
+          <th scope="col">Tipo</th>
+          <th scope="col">Observaciones</th>
+          <th scope="col" class="text-center">Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let donante of donantes">
+          <th scope="row">{{donante.idDonante}}</th>
+          <td>{{donante.nombreDonante}}</td>
+          <td>{{donante.direccionDonante}}</td>
+          <td>{{donante.telefonoDonante}}</td>
+          <td>{{donante.emailDonante}}</td>
+          <td>{{donante.tipoDonante}}</td>
+          <td>{{donante.observacionesDonante}}</td>
+          <td class="text-center">
+            <div class="button-group">
+              <button (click)="editarDonante(donante.idDonante)" class="btn btn-editar">
+                <i class="fa fa-pen"></i> </button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+  </table>
+</div>

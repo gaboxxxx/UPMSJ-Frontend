@@ -1,0 +1,95 @@
+/* Estilos para el menú lateral */
+aside {
+  color: #fff;
+  width: 250px;
+  padding-left: 20px;
+  height: 100vh;
+  background-image: linear-gradient(30deg , #0048bd, #44a7fd);
+  border-top-right-radius: 100px;
+  position: fixed;
+  
+}
+
+
+aside a {
+  font-size: 14px;
+  color: #fff;
+  display: block;
+  padding: 12px;
+  padding-left: 30px;
+  text-decoration: none;
+  -webkit-tap-highlight-color:transparent;
+}
+
+aside a:hover {
+  color: #3f5efb;
+  background: #fff;
+  outline: none;
+  position: relative;
+  background-color: #fff;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+aside a i {
+  margin-right: 5px;
+}
+
+aside a:hover::after {
+  content: "";
+  position: absolute;
+  background-color: transparent;
+  bottom: 100%;
+  right: 0;
+  height: 35px;
+  width: 35px;
+  border-bottom-right-radius: 18px;
+  box-shadow: 0 20px 0 0 #fff;
+}
+
+aside a:hover::before {
+  content: "";
+  position: absolute;
+  background-color: transparent;
+  top: 38px;
+  right: 0;
+  height: 35px;
+  width: 35px;
+  border-top-right-radius: 18px;
+  box-shadow: 0 -20px 0 0 #fff;
+}
+
+aside p {
+  font-size: 20px;
+  margin: 0;
+  padding: 40px 0;
+}
+
+body {
+  font-family: 'Roboto';
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  margin-left: 250px; 
+  padding-left: 250px; /* Añade un relleno a la izquierda para desplazar el contenido */
+}
+
+.container {
+  display: flex; 
+  margin-left: 0;
+  width: 100%; 
+  padding-left: 0px;
+  height: 100vh;
+}
+
+.menu {
+  flex: 0 0 auto; /* Evita que el menú crezca */
+  margin-left: 0;
+}
+
+.contenido {
+  flex: 1; /* Permite que el contenido crezca para llenar el espacio disponible */
+  padding-left: 300px;
+  
+  
+}

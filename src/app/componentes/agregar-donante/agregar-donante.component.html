@@ -1,0 +1,66 @@
+<div class="container">
+
+    <div class="container text-center" style="margin: 30px">
+        <h3>Agregar Donante</h3>
+    </div>
+
+    <form (ngSubmit)="onSubmit()">
+        <div class="mb-3">
+          <label for="nombreDonante" 
+          class="form-label">Nombre</label>
+          <input type="text" class="form-control" 
+          id="nombreDonante" name="nombreDonante" required="true"
+          [(ngModel)]="donante.nombreDonante">
+          <span style="color: red;" *ngIf="!donante.nombreDonante">Todos los campos con * son obligatorios</span>
+        </div>
+
+        <div class="mb-3">
+            <label for="direccionDonante" class="form-label">Dirección</label>
+            <input type="text" class="form-control" 
+            id="direccionDonante" name="direccionDonante" 
+            [(ngModel)]="donante.direccionDonante" required="true">
+            <span style="color: red;" *ngIf="!donante.direccionDonante">*</span>
+        </div>  
+
+        <div class="mb-3">
+            <label for="telefonoDonante" class="form-label">Telefono</label>
+            <input type="text" class="form-control" 
+            id="telefonoDonante" name="telefonoDonante" 
+            [(ngModel)]="donante.telefonoDonante" required="true">
+            <span style="color: red;" *ngIf="!donante.telefonoDonante">*</span>
+        </div> 
+        <div class="mb-3">
+            <label for="emailDonante" class="form-label">Email</label>
+            <input type="text" class="form-control" 
+            id="emailDonante" name="emailDonante" 
+            [(ngModel)]="donante.emailDonante" required="true">
+            <span style="color: red;" *ngIf="!donante.emailDonante">*</span>
+        </div>  
+
+        <div class="mb-3">
+            <label for="tipoDonante" class="form-label">Tipo de Donante</label>
+            <select class="form-select" id="tipoDonante" name="tipoDonante" [(ngModel)]="donante.tipoDonante" required>
+                <option value="Personal">Personal</option>
+                <option value="Empresarial">Empresarial</option>
+            </select>
+            <span style="color: red;" *ngIf="!donante.tipoDonante">*</span>
+        </div>
+        <div class="mb-3">
+            <label for="observacionesDonante" 
+            class="form-label"> Observaciones</label>
+            <input type="text" class="form-control" 
+            id="observacionesDonante" name="observacionesDonante" required="true"
+            [(ngModel)]="donante.observacionesDonante" style="height: 100px;">
+          </div>
+        
+          
+          
+
+        <div class="text-center">
+          <button type="submit" class="btn btn-warning btn-sm me-3" (click)="validarCampos($event)">Agregar</button>
+            <a href="/" class="btn btn-danger btn-sm">Regresar</a>    
+        </div>
+        
+      </form>
+
+</div>

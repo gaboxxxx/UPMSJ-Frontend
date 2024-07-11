@@ -1,0 +1,36 @@
+<div class="container">
+    
+    <div class="header" style="margin: 30px">
+        <h3>Sistema de Inventarios</h3>
+    </div>
+    
+    <table class="tabla-beneficiario">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Beneficiario</th>
+            <th scope="col">Servicio</th>
+            <th scope="col">Coordinador</th>
+            <th scope="col">Observaciones</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let beneficiario of beneficiarios">
+            <th scope="row">{{beneficiario.idBeneficiario}}</th>
+            <td>{{beneficiario.nombreBeneficiario}}</td>
+            <td>{{beneficiario.servicioBeneficiario}}</td>
+            <td>{{beneficiario.coordinadorBeneficiario}}</td>
+            <td>{{beneficiario.observacionesBeneficiario}}</td>
+            <td class="text-center">
+              <div>
+                <button (click)="editarBeneficiario(beneficiario.idBeneficiario)"
+                class="btn btn-editar"><i class="fa fa-pen"></i></button>
+                
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+</div>
+
