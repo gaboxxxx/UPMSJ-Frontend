@@ -33,6 +33,9 @@ import { MatIconModule } from '@angular/material/icon';
 import { CarritoComponent } from './componentes/carrito/carrito.component';
 import { ItemCarritoComponent } from './componentes/item-carrito/item-carrito.component';
 import { MatButtonModule } from '@angular/material/button';
+import { MenuComponent } from './componentes/menu/menu.component';
+import { Cod404Component } from './componentes/cod404/cod404.component';
+import { LoginComponent } from './page/login/login.component';
 
 
 
@@ -50,6 +53,9 @@ import { MatButtonModule } from '@angular/material/button';
     BeneficiarioListaComponent,
     CarritoComponent,
     ItemCarritoComponent,
+    MenuComponent,
+    Cod404Component,
+    LoginComponent,
     
   ],
   imports: [

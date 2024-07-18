@@ -1,11 +1,12 @@
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
-<div class="container">
-  <div class="header text-center">
-      <h3>Sistema de Inventarios</h3>
+<div class="main-container">
+  <div class="menu">
+    <app-menu></app-menu>
   </div>
-  
-  <table class="tabla-donante">
+  <div class="container">
+    <div class="header text-center">
+      <h3>Sistema de Inventarios</h3>
+    </div>
+    <table class="tabla-donante">
       <thead>
         <tr>
           <th scope="col">Id</th>
@@ -30,10 +31,12 @@
           <td class="text-center">
             <div class="button-group">
               <button (click)="editarDonante(donante.idDonante)" class="btn btn-editar">
-                <i class="fa fa-pen"></i> </button>
+                <i class="fa fa-pen"></i> 
+              </button>
             </div>
           </td>
         </tr>
       </tbody>
-  </table>
+    </table>
+  </div>
 </div>

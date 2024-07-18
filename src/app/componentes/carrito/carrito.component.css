@@ -5,13 +5,21 @@ body {
   padding: 20px;
 }
 
+.main-container {
+  display: flex;
+  height: 100vh;
+}
+
 .container {
   background-color: #fff;
-  border-radius: 8px;
+  border-radius: 50px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
   max-width: 1200px;
   margin: auto;
+  display: flex; 
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 .container h3 {
@@ -97,10 +105,10 @@ button {
   background-color: #007bff;
   color: #fff;
   border: none;
-  border-radius: 4px;
-  padding: 10px 15px;
+  border-radius: 20px;
+  padding: 20px 10px;
   cursor: pointer;
-  margin-right: 50px;
+  margin-right: 10px;
   transition: background-color 0.3s;
 }
 
@@ -124,4 +132,12 @@ table.mat-elevation-z8 {
 
 mat-paginator {
   margin-top: 20px;
+}
+
+button.mat-icon-button .icon-small {
+  font-size: 40px;
+}
+
+.icon-small {
+  font-size: 15px; /* Ajusta el tamaño según sea necesario */
 }

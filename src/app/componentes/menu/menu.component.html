@@ -1,0 +1,46 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+<div class="container">
+  <div class="menu">
+    <aside>
+      <p>Sistema de Inventario</p>
+      <a routerLink="/productos" routerLinkActive="active">
+        <i class="fa fa-user-o" aria-hidden="true"></i>
+        <span>Lista de Productos</span>
+      </a>
+      <a routerLink="/agregar-producto" routerLinkActive="active">
+        <i class="" aria-hidden="true"></i>
+        <span>Agregar Producto</span>
+      </a>
+      <a routerLink="/donantes" routerLinkActive="active">
+        <i class="" aria-hidden="true"></i>
+        <span>Donantes</span>
+      </a>
+      <a routerLink="/agregar-donante" routerLinkActive="active">
+        <i class="fa fa-star-o" aria-hidden="true"></i>
+        <span>Agregar Donantes</span>
+      </a>
+      <a routerLink="/beneficiarios" routerLinkActive="active">
+        <i class="fa fa-trash-o" aria-hidden="true"></i>
+        <span>Beneficiarios</span>
+      </a>
+      <a routerLink="/agregar-beneficiario" routerLinkActive="active">
+        <i class="fa fa-trash-o" aria-hidden="true"></i>
+        <span>Agregar Beneficiarios</span>
+      </a>
+      <a routerLink="/carrito" routerLinkActive="active">
+        <i class="fa fa-trash-o" aria-hidden="true"></i>
+        <span>Realizar una Donación</span>
+      </a>
+      <a (click)="salir()" class="salir">
+        <i class="fa fa-sign-out-alt" aria-hidden="true"></i>
+        <span>Salir</span>
+      </a>
+      
+    </aside>
+  </div>
+
+  <div class="contenido">
+    <router-outlet></router-outlet>
+  </div>
+</div>

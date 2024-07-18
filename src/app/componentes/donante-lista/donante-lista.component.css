@@ -1,8 +1,15 @@
 /* Reset CSS */
-* {
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+}
+
+.main-container {
+  display: flex;
+  height: 100vh;
 }
 
 
@@ -10,82 +17,70 @@
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
+  padding: 40px;
   max-width: 1200px;
-  margin: 20px auto;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  overflow-y: auto;
 }
 
-.header {
-  margin-bottom: 30px;
-  text-align: center;
-}
-
-.header h3 {
-  color: #333;
-  font-size: 28px;
-  margin-bottom: 20px;
+.header.text-center h3 {
+  color: #444;
   font-weight: bold;
+  margin-bottom: 20px;
 }
 
 .tabla-donante {
   width: 100%;
   border-collapse: collapse;
-  margin-bottom: 20px;
-  font-size: 16px;
+  margin-top: 20px;
 }
 
-.tabla-donante thead {
-  background-color: #ffff;
-  color: #000; /* Color negro para el texto del encabezado */
-}
-
-.tabla-donante th,
-.tabla-donante td {
-  padding: 12px 15px;
-  border: 1px solid #dee2e6;
+.tabla-donante th, .tabla-donante td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
 }
 
 .tabla-donante th {
-  font-weight: bold;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.tabla-donante tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
 }
 
 .tabla-donante tbody tr:hover {
   background-color: #f1f1f1;
 }
 
-.align-middle {
-  vertical-align: middle;
-}
-
-.text-center {
-  text-align: center;
-}
-
-.button-group {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-}
-
 .btn {
-  color: #fff;
-  cursor: pointer;
-  border: none;
+  padding: 6px 12px;
+  font-size: 14px;
   border-radius: 4px;
-  padding: 8px 12px;
-  transition: background-color 0.3s ease;
-  
+  text-transform: uppercase;
+  transition: background-color 0.3s ease-in-out;
+  border: none;
+  cursor: pointer;
 }
 
 .btn-editar {
   background-color: #007bff;
+  color: #fff;
 }
 
 .btn-editar:hover {
   background-color: #0056b3;
 }
 
-.btn i {
-  margin-right: 7px;
-  margin-left: 7px;
+.button-group {
+  display: flex;
+  justify-content: center;
+}
+
+.text-center {
+  text-align: center;
 }

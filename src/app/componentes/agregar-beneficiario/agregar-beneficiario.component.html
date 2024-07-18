@@ -1,44 +1,43 @@
-<div class="container text-center" style="margin: 30px">
-    <h3>Agregar Beneficiario</h3>
-</div>
-
-<form (ngSubmit)="onSubmit()">
-    <div class="mb-3">
-        <label for="nombreBeneficiario" class="form-label">Beneficiario</label>
-        <input type="text" class="form-control" 
-        id="nombreBeneficiario" name="nombreBeneficiario" required="true"
-        [(ngModel)]="beneficiario.nombreBeneficiario">
-        <span style="color: red;" *ngIf="!beneficiario.nombreBeneficiario">Todos los campos con * son obligatorios</span>
-    </div>
-
-    <div class="mb-3">
-        <label for="servicioBeneficiario" class="form-label">Servicio al que pertenece el beneficiario</label>
-        <input type="text" class="form-control" 
-        id="servicioBeneficiario" name="servicioBeneficiario" 
-        [(ngModel)]="beneficiario.servicioBeneficiario" required="true">
-        <span style="color: red;" *ngIf="!beneficiario.servicioBeneficiario">*</span>
-    </div>  
-
-    <div class="mb-3">
-        <label for="coordinadorBeneficiario" class="form-label">Nombre del Coordinador</label>
-        <input type="text" class="form-control" 
-        id="coordinadorBeneficiario" name="coordinadorBeneficiario" 
-        [(ngModel)]="beneficiario.coordinadorBeneficiario" required="true">
-        <span style="color: red;" *ngIf="!beneficiario.coordinadorBeneficiario">*</span>
-    </div> 
-    
-
-    <div class="mb-3">
-        <label for="observacionesBeneficiario" class="form-label"> Observaciones</label>
-        <input type="text" class="form-control" 
-        id="observacionesBeneficiario" name="observacionesBeneficiario" required="true"
-        [(ngModel)]="beneficiario.observacionesBeneficiario" style="height: 100px;">
+<div class="main-container">
+    <div class="menu">
+      <app-menu></app-menu>
     </div>
   
-    <div class="text-center">
-        <button type="submit" class="btn btn-warning btn-sm me-3" (click)="validarCampos($event)">Agregar</button>
-        <a href="/" class="btn btn-danger btn-sm">Regresar</a>    
+    <div class="container">
+      <div class="header text-center" style="margin: 30px">
+        <h3>Agregar Beneficiario</h3>
+      </div>
+  
+      <form (ngSubmit)="onSubmit()" class="form-grid">
+        <div class="form-group">
+          <label for="nombreBeneficiario" class="form-label">Beneficiario</label>
+          <input type="text" class="form-control" id="nombreBeneficiario" name="nombreBeneficiario" required="true" [(ngModel)]="beneficiario.nombreBeneficiario">
+          <span *ngIf="!beneficiario.nombreBeneficiario">Todos los campos con * son obligatorios</span>
+        </div>
+  
+        <div class="form-group">
+          <label for="servicioBeneficiario" class="form-label">Servicio al que pertenece el beneficiario</label>
+          <input type="text" class="form-control" id="servicioBeneficiario" name="servicioBeneficiario" [(ngModel)]="beneficiario.servicioBeneficiario" required="true">
+          <span *ngIf="!beneficiario.servicioBeneficiario">*</span>
+        </div>  
+  
+        <div class="form-group">
+          <label for="coordinadorBeneficiario" class="form-label">Nombre del Coordinador</label>
+          <input type="text" class="form-control" id="coordinadorBeneficiario" name="coordinadorBeneficiario" [(ngModel)]="beneficiario.coordinadorBeneficiario" required="true">
+          <span *ngIf="!beneficiario.coordinadorBeneficiario">*</span>
+        </div> 
+  
+        <div class="form-group">
+          <label for="observacionesBeneficiario" class="form-label">Observaciones</label>
+          <input type="text" class="form-control" id="observacionesBeneficiario" name="observacionesBeneficiario" required="true" [(ngModel)]="beneficiario.observacionesBeneficiario" style="height: 100px;">
+        </div>
+  
+        <div class="form-actions text-center">
+          <button type="submit" class="btn btn-agregar" (click)="validarCampos($event)">Agregar</button>
+          <a href="/beneficiarios" class="btn btn-regresar">Regresar</a>
+        </div>
+      </form>
     </div>
-</form>
-
+  </div>
+  
 

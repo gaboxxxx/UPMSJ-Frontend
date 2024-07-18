@@ -5,7 +5,9 @@ import { DonanteService } from '../../servicios/donante.service';
 
 @Component({
   selector: 'app-editar-donante',
-  templateUrl: './editar-donante.component.html'
+  templateUrl: './editar-donante.component.html',
+  styleUrls: ['./editar-donante.component.css']
+  
 })
 export class EditarDonanteComponent {
   donante: Donante = new Donante();

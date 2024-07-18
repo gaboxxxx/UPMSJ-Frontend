@@ -7,11 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'inventario-app3';
-  isContenedorVisible: boolean = true;
-
-  toggleContenedorVisibility() {
-    this.isContenedorVisible = !this.isContenedorVisible;
-  }
   
 }
 
