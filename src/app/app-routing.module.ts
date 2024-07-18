@@ -33,7 +33,7 @@ const routes: Routes = [
   { path: 'item-carrito', component: ItemCarritoComponent, canActivate: [AuthGuard] },
   { path: 'login',component: LoginComponent,},
 
-  { path: '', redirectTo: 'productos', pathMatch: 'full' }, // Redirige a 'productos' cuando la ruta es vacía
+  { path: '', redirectTo: 'login', pathMatch: 'full' }, // Redirige a 'productos' cuando la ruta es vacía
 ];
 
 @NgModule({
